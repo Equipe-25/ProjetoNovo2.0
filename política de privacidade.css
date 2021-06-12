@@ -1,0 +1,52 @@
+p{
+	color: #777;
+	background-color: white;
+	text-align: justify;
+	padding: 25px 40px ;
+	margin-bottom: 20px;
+	}
+
+      h3 ,h2,h4{
+	text-transform: uppercase;
+	color: #111;
+	text-align: center;}
+
+     body,html{
+	margin: 0;
+	font: 11px "Lato",sans-serif;
+	color: #777;
+	height: 100%;
+	
+	}
+
+	/*efeito parallax----*/
+	.caixa4 {
+	    
+	    height: 90%;
+	    opacity: 0.5;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: center;
+	    background-attachment: fixed;
+	}
+	
+
+	.caixa4{background-image: url(imagem4.jpg);}
+
+
+	.botao{
+		position: relative;
+		left: 370px;
+		bottom: 370px;
+
+
+
+
+	}
+
+	.logomarca{
+		position: relative;
+		left: 140px;
+		top: 100px;
+
+	}
