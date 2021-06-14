@@ -2,6 +2,9 @@
 
 Projeto do semestre FICR SustenApp
 
+
+git checkout master origin/master
+
 ## Install the dependencies
 ```bash
 yarn
