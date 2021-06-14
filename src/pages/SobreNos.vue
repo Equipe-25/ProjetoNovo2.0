@@ -31,9 +31,9 @@ export default {
 </script>
 
 <style scoped>
-.container { 
-  width: 700px; 
+.container {
+  width: 700px;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
 }
 </style>

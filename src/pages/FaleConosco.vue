@@ -1,6 +1,6 @@
 <template class="template">
   <div class="q-pa-lg">
-    <div class="col-12">
+    <div class="container">
       <q-card class="my-card">
         <q-card-section>
           <div>
@@ -43,3 +43,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.container {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
