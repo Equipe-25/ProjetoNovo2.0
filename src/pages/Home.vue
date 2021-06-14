@@ -1,5 +1,5 @@
 <template>
-  <div>HOME</div>
+  <div class="q-pa-lg">HOME</div>
 </template>
 
 <script>

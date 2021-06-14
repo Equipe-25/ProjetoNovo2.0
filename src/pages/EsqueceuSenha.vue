@@ -3,13 +3,16 @@
     <div class="my-card">
             <div class="q-gutter-y-md">
               <h4 class="h4">Redefinir Senha</h4>
-
-              <q-input filled v-model="senhaAn" outlined color="green-5" label="Senha Antiga"/>
-              <q-input filled v-model="senhaAt" outlined color="green-5" label="Senha Atual"/>
-
-              <q-btn outline rounded color="brown-5" label="Cancelar" @click="$router.replace('layouts/Login.vue')"/>
-              <q-btn outline rounded color="brown-5" background-color="#A8711D" class="avanca" label="Avançar" @click="$router.replace('layouts/Feed.vue')"/>
-
+              <q-input v-model="senha" dense outlined color="green-5" label="Senha Antiga"/>
+              <q-input v-model="senhaAtual" dense outlined color="green-5" label="Senha Atual"/>
+              <div class="row justify-between">
+                <div class="q-ma-xs">
+                  <q-btn outline rounded color="green-5" label="Voltar" @click="$router.push('login')"/>
+                </div>
+                <div class="q-ma-xs">
+                  <q-btn rounded color="green" class="avanca glossy" label="Redefinir Senha" @click="$router.push('login')"/>
+                </div>
+              </div>
               <div>
           </div>
     </div></div>
@@ -20,7 +23,8 @@
 export default {
   data () {
     return {
-      password: ''
+      senha: '',
+      senhaAtual: ''
     }
   }
 }

@@ -10,7 +10,6 @@
                 src="icons/rrr.png"
                       :ratio="1"/>
           </q-avatar>
-
           <q-toolbar-title>SustentApp</q-toolbar-title>
           <q-tabs v-model="tab">
             <q-tab @click="$router.push('home')" label="Página Inicial" />
@@ -18,11 +17,8 @@
             <q-tab @click="$router.push('comunidade')" label="Comunidade" />
             <q-tab @click="$router.push('sobre-nos')" label="Sobre Nós" />
             <q-tab @click="$router.push('fale-conosco')" label="Fale Conosco" />
+            <q-tab @click="$router.push('configuracoes')" label="Configurações" />
           </q-tabs>
-          <!-- <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar> -->
-          <!-- <q-btn flat round dense icon="person" /> -->
         </q-toolbar>
 
       </q-header>

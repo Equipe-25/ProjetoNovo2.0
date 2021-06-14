@@ -23,7 +23,8 @@ const routes = [
       { path: 'fale-conosco', name: 'fale-conosco', component: () => import('pages/FaleConosco.vue') },
       { path: 'sobre-nos', name: 'sobre-nos', component: () => import('pages/SobreNos.vue') },
       { path: 'perfil', name: 'perfil', component: () => import('pages/Perfil.vue') },
-      { path: 'comunidade', name: 'comunidade', component: () => import('pages/Comunidade.vue') }
+      { path: 'comunidade', name: 'comunidade', component: () => import('pages/Comunidade.vue') },
+      { path: 'configuracoes', name: 'configuracoes', component: () => import('pages/Configuracoes.vue') }
     ]
   },
   // {
