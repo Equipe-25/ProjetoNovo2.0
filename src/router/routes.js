@@ -19,7 +19,7 @@ const routes = [
     path: '/',
     component: () => import('../layouts/MainLayout.vue'),
     children: [
-      { path: 'home', name: 'home', component: () => import('pages/Home.vue') },
+      { path: 'home', name: 'home', component: () => import('src/pages/Home.vue') },
       { path: 'fale-conosco', name: 'fale-conosco', component: () => import('pages/FaleConosco.vue') },
       { path: 'sobre-nos', name: 'sobre-nos', component: () => import('pages/SobreNos.vue') },
       { path: 'perfil', name: 'perfil', component: () => import('pages/Perfil.vue') },
