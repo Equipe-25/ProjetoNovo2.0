@@ -1,21 +1,24 @@
 <template class="template">
-<div class="window-width row fullscreen flex-center">
+  <div class="window-width row fullscreen flex-center">
     <div class="my-card">
-            <div class="q-gutter-y-md">
-              <h4 class="h4">Redefinir Senha</h4>
-              <q-input v-model="senha" dense outlined color="green-5" label="Senha Antiga"/>
-              <q-input v-model="senhaAtual" dense outlined color="green-5" label="Senha Atual"/>
-              <div class="row justify-between">
-                <div class="q-ma-xs">
-                  <q-btn outline rounded color="green-5" label="Voltar" @click="$router.push('login')"/>
-                </div>
-                <div class="q-ma-xs">
-                  <q-btn rounded color="green" class="avanca glossy" label="Redefinir Senha" @click="$router.push('login')"/>
-                </div>
+      <div v-if="!enviado" class="q-gutter-y-md">
+        <h4 class="h4">Esqueci minha senha :(</h4>
+          <q-input v-model="email" dense outlined color="green-5" label="Digite seu email"/>
+            <div class="row justify-between">
+              <div class="q-ma-xs">
+                <q-btn outline rounded color="green-5" label="Voltar" @click="$router.push('login')"/>
               </div>
-              <div>
-          </div>
-    </div></div>
+              <div class="q-ma-xs">
+                <q-btn rounded color="green" class="avanca glossy" label="Recuperar Senha" @click="recuperar"/>
+              </div>
+            </div>
+          <div>
+        </div>
+      </div>
+      <div v-else>
+        <h4 class="h4">Um link de recuperação foi enviado para seu email :)</h4>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -23,8 +26,13 @@
 export default {
   data () {
     return {
-      senha: '',
-      senhaAtual: ''
+      email: '',
+      enviado: false
+    }
+  },
+  methods: {
+    recuperar () {
+      this.enviado = true
     }
   }
 }

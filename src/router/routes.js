@@ -6,7 +6,7 @@ const routes = [
       { path: '', name: 'login', component: () => import('pages/Login.vue') },
       { path: 'login', name: 'login', component: () => import('pages/Login.vue') },
       { path: 'cadastro', name: 'cadastro', component: () => import('pages/Cadastro.vue') },
-      { path: 'esqueceu-a-senha', name: 'esqueceu-a-senha', component: () => import('pages/EsqueceuSenha.vue') }
+      { path: 'esqueceu-a-senha', name: 'esqueceu-a-senha', component: () => import('src/pages/EsqueceuSenha.vue') }
       // { path: '', name: 'login', component: () => import('pages/login/login.vue') },
       // { path: 'cadastrar', name: 'signUp', component: () => import('pages/sign-up.vue') },
       // { path: 'esqueci-senha', name: 'forgotPassword', component: () => import('pages/forgot-password.vue') },
@@ -24,7 +24,8 @@ const routes = [
       { path: 'sobre-nos', name: 'sobre-nos', component: () => import('pages/SobreNos.vue') },
       { path: 'perfil', name: 'perfil', component: () => import('pages/Perfil.vue') },
       { path: 'comunidade', name: 'comunidade', component: () => import('pages/Comunidade.vue') },
-      { path: 'configuracoes', name: 'configuracoes', component: () => import('pages/Configuracoes.vue') }
+      { path: 'configuracoes', name: 'configuracoes', component: () => import('pages/Configuracoes.vue') },
+      { path: 'redefinir-senha', name: 'redefinir-senha', component: () => import('src/pages/RedefinirSenha.vue') }
     ]
   },
   // {
