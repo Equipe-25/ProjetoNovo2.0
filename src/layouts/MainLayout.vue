@@ -15,6 +15,7 @@
             <q-tab @click="$router.push('home')" label="Página Inicial" />
             <q-tab @click="$router.push('perfil')" label="Perfil" />
             <q-tab @click="$router.push('comunidade')" label="Comunidade" />
+            <q-tab @click="$router.push('dicas')" label="Dicas" />
             <q-tab @click="$router.push('sobre-nos')" label="Sobre Nós" />
             <q-tab @click="$router.push('fale-conosco')" label="Fale Conosco" />
             <q-tab @click="$router.push('configuracoes')" label="Configurações" />

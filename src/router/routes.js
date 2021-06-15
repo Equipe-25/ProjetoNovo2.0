@@ -25,7 +25,8 @@ const routes = [
       { path: 'perfil', name: 'perfil', component: () => import('pages/Perfil.vue') },
       { path: 'comunidade', name: 'comunidade', component: () => import('pages/Comunidade.vue') },
       { path: 'configuracoes', name: 'configuracoes', component: () => import('pages/Configuracoes.vue') },
-      { path: 'redefinir-senha', name: 'redefinir-senha', component: () => import('src/pages/RedefinirSenha.vue') }
+      { path: 'redefinir-senha', name: 'redefinir-senha', component: () => import('src/pages/RedefinirSenha.vue') },
+      { path: 'dicas', name: 'dicas', component: () => import('src/pages/Dicas.vue') }
     ]
   },
   // {

@@ -11,10 +11,10 @@
               <q-btn class="glossy enter" rounded color="green" label="Logar" @click="$router.push('home')"/>
               <div class="row justify-between">
                 <div class="q-ma-xs">
-                  <a class="mouse" style="color: green"><q-side-link @click="$router.push('cadastro')">Cadastre-se</q-side-link></a>
+                  <a class="mouse" style="color: green" @click="$router.push('cadastro')">Cadastre-se</a>
                 </div>
                 <div class="q-ma-xs">
-                  <a class="mouse" style="color: green"><q-side-link @click="$router.push('esqueceu-a-senha')">Esqueceu sua senha?</q-side-link></a>
+                  <a class="mouse" style="color: green" @click="$router.push('esqueceu-a-senha')">Esqueceu sua senha?</a>
                 </div>
               </div>
               <div>
@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     cadastro () {
-      console.log('teste')
+      // console.log('teste')
       this.$router.push({
         name: 'cadastro'
       })

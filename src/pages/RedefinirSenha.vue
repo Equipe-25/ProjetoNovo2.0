@@ -7,7 +7,7 @@
               <q-input v-model="senhaAtual" dense outlined type="password" color="green-5" label="Senha Atual"/>
               <div class="row justify-between">
                 <div class="q-ma-xs">
-                  <q-btn outline rounded color="green-5" label="Voltar" @click="$router.push('login')"/>
+                  <q-btn outline rounded color="green-5" label="Voltar" @click="$router.push('configuracoes')"/>
                 </div>
                 <div class="q-ma-xs">
                   <q-btn rounded color="green" class="avanca glossy" label="Redefinir Senha" @click="$router.push('home')"/>
