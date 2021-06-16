@@ -14,7 +14,7 @@
           </p>
         </q-card-section>
         <q-card-section class="row flex-center">
-          <div class="q-mr-md q-mb-lg" style="width: 40%">
+          <div class="q-mr-md q-mb-lg" style="width: 43%">
             <q-card>
               <q-card-section>
                 <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
@@ -35,7 +35,7 @@
               </q-card-actions>
             </q-card>
           </div>
-          <div class="q-ml-md q-mb-lg" style="width: 40%">
+          <div class="q-ml-md q-mb-lg" style="width: 43%">
             <q-card>
               <q-card-section>
                 <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
@@ -56,7 +56,7 @@
               </q-card-actions>
             </q-card>
           </div>
-          <div class="q-mr-md q-mb-lg" style="width: 40%">
+          <div class="q-mr-md q-mb-lg" style="width: 43%">
             <q-card>
               <q-card-section>
                 <div class="text-h5 text-center" style="color: green">Edson Santana</div>
@@ -77,7 +77,7 @@
               </q-card-actions>
             </q-card>
           </div>
-          <div class="q-ml-md q-mb-lg" style="width: 40%">
+          <div class="q-ml-md q-mb-lg" style="width: 43%">
             <q-card>
               <q-card-section>
                 <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
