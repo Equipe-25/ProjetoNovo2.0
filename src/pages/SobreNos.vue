@@ -59,7 +59,7 @@
           <div class="q-mr-md q-mb-lg" style="width: 40%">
             <q-card>
               <q-card-section>
-                <div class="text-h5 text-center" style="color: green">Ed Junior</div>
+                <div class="text-h5 text-center" style="color: green">Edson Santana</div>
                 <div class="text-subtitle2 text-center" style="color: gray">@edsonju99</div>
               </q-card-section>
               <q-img src="../assets/ed.jpeg" :ratio="1" />
