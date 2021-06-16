@@ -62,7 +62,7 @@
                 <div class="text-h5 text-center" style="color: green">Ed Junior</div>
                 <div class="text-subtitle2 text-center" style="color: gray">@edsonju99</div>
               </q-card-section>
-              <q-img src="../assets/diogo.jpg" :ratio="1" />
+              <q-img src="../assets/ed.jpeg" :ratio="1" />
               <q-card-section>
                 <p class="text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
