@@ -59,8 +59,8 @@
           <div class="q-mr-md q-mb-lg" style="width: 40%">
             <q-card>
               <q-card-section>
-                <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
-                <div class="text-subtitle2 text-center" style="color: gray">@diogoladorucki</div>
+                <div class="text-h5 text-center" style="color: green">Ed Junior</div>
+                <div class="text-subtitle2 text-center" style="color: gray">@edsonju99</div>
               </q-card-section>
               <q-img src="../assets/diogo.jpg" :ratio="1" />
               <q-card-section>
@@ -71,9 +71,9 @@
               </q-card-section>
               <hr>
               <q-card-actions align="center">
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/diogofelipeladorucki')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/diogo-felipe/')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/diogoladorucki/')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/Edson-jr')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/edson-junior-2937b5144/')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/edsonju99/')" />
               </q-card-actions>
             </q-card>
           </div>
