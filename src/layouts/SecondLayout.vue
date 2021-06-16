@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <q-layout view="lHh lpr lFf"  class="shadow-2">
+    <q-layout view="lHh lpr lFf"  class="shadow-2 bg-cor-fundo">
       <q-page-container>
         <router-view />
     </q-page-container>
@@ -13,12 +13,11 @@
 
 export default {
   name: 'MainLayout'
-  // components: {},
-  // data () {
-  //   return {
-  //     tab: 'images',
-  //     leftDrawerOpen: false
-  //   }
-  // }
 }
 </script>
+
+<style scoped>
+.bg-cor-fundo{
+  background-color: rgba(72, 52, 30, 0.124)
+}
+</style>

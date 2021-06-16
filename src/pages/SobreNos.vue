@@ -13,6 +13,92 @@
             {{texto2}}
           </p>
         </q-card-section>
+        <q-card-section class="row flex-center">
+          <div class="q-mr-md q-mb-lg" style="width: 40%">
+            <q-card>
+              <q-card-section>
+                <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
+                <div class="text-subtitle2 text-center" style="color: gray">@diogoladorucki</div>
+              </q-card-section>
+              <q-img src="../assets/diogo.jpg" :ratio="1" />
+              <q-card-section>
+                <p class="text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </q-card-section>
+              <hr>
+              <q-card-actions align="center">
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/diogofelipeladorucki')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/diogo-felipe/')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/diogoladorucki/')" />
+              </q-card-actions>
+            </q-card>
+          </div>
+          <div class="q-ml-md q-mb-lg" style="width: 40%">
+            <q-card>
+              <q-card-section>
+                <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
+                <div class="text-subtitle2 text-center" style="color: gray">@diogoladorucki</div>
+              </q-card-section>
+              <q-img src="../assets/diogo.jpg" :ratio="1" />
+              <q-card-section>
+                <p class="text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </q-card-section>
+              <hr>
+              <q-card-actions align="center">
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/diogofelipeladorucki')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/diogo-felipe/')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/diogoladorucki/')" />
+              </q-card-actions>
+            </q-card>
+          </div>
+          <div class="q-mr-md q-mb-lg" style="width: 40%">
+            <q-card>
+              <q-card-section>
+                <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
+                <div class="text-subtitle2 text-center" style="color: gray">@diogoladorucki</div>
+              </q-card-section>
+              <q-img src="../assets/diogo.jpg" :ratio="1" />
+              <q-card-section>
+                <p class="text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </q-card-section>
+              <hr>
+              <q-card-actions align="center">
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/diogofelipeladorucki')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/diogo-felipe/')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/diogoladorucki/')" />
+              </q-card-actions>
+            </q-card>
+          </div>
+          <div class="q-ml-md q-mb-lg" style="width: 40%">
+            <q-card>
+              <q-card-section>
+                <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
+                <div class="text-subtitle2 text-center" style="color: gray">@diogoladorucki</div>
+              </q-card-section>
+              <q-img src="../assets/diogo.jpg" :ratio="1" />
+              <q-card-section>
+                <p class="text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </q-card-section>
+              <hr>
+              <q-card-actions align="center">
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/diogofelipeladorucki')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/diogo-felipe/')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/diogoladorucki/')" />
+              </q-card-actions>
+            </q-card>
+          </div>
+        </q-card-section>
       </q-card>
     </div>
   </div>
@@ -22,9 +108,13 @@
 export default {
   data () {
     return {
-      texto: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.',
-      texto2: 'É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por lorem ipsum mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).',
-      password: ''
+      texto: 'O termo sustentabilidade vem sendo utilizado com mais frequência em empresas e organizações desde a primeira década do século XXI. Medidas sustentáveis visam permitir as atividades humanas e a renovação dos recursos naturais.',
+      texto2: 'A SustentApp é uma empresa emergente no estado, fornecendo condições aos seus colaboradores. Seus produtos correspondem às necessidades dos clientes de forma sustentável, poupando tempo, dinheiro e esforço com materiais de qualidade. Desta forma, a SustentApp atua com responsabilidade, assumindo um compromisso real com seus clientes. Esta união fornece produtos biodegradáveis com tecnologia de ponta. Pensamos na sustentabilidade desde a produção, incluindo a relação custo/benefício, redução de desperdícios e menor produção de lixo.'
+    }
+  },
+  methods: {
+    link (link) {
+      window.open(link, '_blank')
     }
   }
 }
@@ -35,5 +125,12 @@ export default {
   width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+.pointer{
+  cursor: pointer;
+}
+hr{
+  width: 80%;
+  border: 0; border-top: 1px solid green;
 }
 </style>

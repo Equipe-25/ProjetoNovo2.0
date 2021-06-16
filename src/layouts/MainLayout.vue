@@ -1,8 +1,8 @@
 
 <template>
   <div>
-    <q-layout view="lHh lpr lFf"  class="shadow-2">
-      <q-header elevated style="background-color: green">
+    <q-layout view="lHh lpr lFf"  class="shadow-2 bg-cor-fundo">
+      <q-header elevated class="bg-cor">
         <q-toolbar>
           <!-- <q-btn flat round dense icon="menu" class="q-mr-sm" /> -->
           <q-avatar>
@@ -44,3 +44,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.bg-cor{
+  background-color: rgba(36, 150, 36, 0.933)
+}
+.bg-cor-fundo{
+  background-color: rgba(72, 52, 30, 0.124)
+}
+</style>

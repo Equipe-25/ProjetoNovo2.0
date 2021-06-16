@@ -32,6 +32,10 @@ export default {
   methods: {
     enviar () {
       console.log('NOTIFY AQUI')
+      this.nome = ''
+      this.email = ''
+      this.telefone = ''
+      this.mensagem = ''
       // Notify({
       //   color: 'green ',
       // textColor: 'white',
