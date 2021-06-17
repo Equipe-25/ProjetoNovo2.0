@@ -5,12 +5,12 @@
         <q-item style="margin-top: -20px; margin-left: 15px; padding: 0">
             <q-item-section avatar>
               <q-avatar size="100px">
-                <img src="https://cdn.quasar.dev/img/avatar3.jpg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kristian_Nairn_%28cropped%29.jpg/140px-Kristian_Nairn_%28cropped%29.jpg">
               </q-avatar>
             </q-item-section>
 
             <q-item-section style="color: #ffffee" >
-              <q-item-label><h4 class="q-ma-xs">Nome do Meliante Silva</h4></q-item-label>
+              <q-item-label><h4 class="q-ma-xs">{{user.nickname}}</h4></q-item-label>
               <div class="col-auto text-grey text-caption q-pt-md row no-wrap items-center" style="padding-top: 0; font-size: 20px">
                 <q-icon name="place" />
                 Recife
@@ -22,12 +22,10 @@
 </template>
 
 <script>
-
+import { mapState } from 'vuex'
 export default {
-  data () {
-    return {
-      text: ''
-    }
+  computed:{
+    ...mapState('auth', ["user"])
   }
 }
 </script>

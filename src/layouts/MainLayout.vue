@@ -12,7 +12,7 @@
           </q-avatar>
           <q-toolbar-title>SustentApp</q-toolbar-title>
           <q-tabs v-model="tab">
-            <q-tab @click="$router.push('home')" label="Página Inicial" />
+            <q-tab @click="$router.push({name: 'home'})" label="Página Inicial" />
             <q-tab @click="$router.push('perfil')" label="Perfil" />
             <q-tab @click="$router.push('comunidade')" label="Comunidade" />
             <q-tab @click="$router.push('dicas')" label="Dicas" />

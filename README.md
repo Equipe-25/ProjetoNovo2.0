@@ -1,9 +1,6 @@
-# SustenApp-Spa (sustenapp-spa)
+# Quasar App (sustent-front)
 
-Projeto do semestre FICR SustenApp
-
-
-git checkout master origin/master
+A Quasar Framework app
 
 ## Install the dependencies
 ```bash
@@ -15,10 +12,6 @@ yarn
 quasar dev
 ```
 
-### Lint the files
-```bash
-yarn run lint
-```
 
 ### Build the app for production
 ```bash

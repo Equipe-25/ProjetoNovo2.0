@@ -2,95 +2,150 @@
   <div class="q-pa-lg container">
     <q-card class="my-card q-mb-lg">
       <div class="q-pa-md">
-        <q-input v-model="form.publicacao" class="q-pb-md" outlined color="green-5" type="textarea" label="No que está pensando?"/>
         <q-input
+          v-model="form.publicacao"
           class="q-pb-md"
-          @input="val => { file = val[0] }"
           outlined
+          color="green-5"
+          type="textarea"
+          label="No que está pensando?"
+        />
+        <input
+          ref="file"
           type="file"
-          hint="Escolha uma foto"
+          accept="image/jpeg, image/png"
+          style="display: none"
+          @change="previewFiles"
+        />
+        <q-btn
+          class="glossy enter"
+          rounded
+          color="green"
+          label="Escolher arquivo"
+          @click="$refs.file.click()"
         />
         <div class="row justify-end">
-            <q-btn class="glossy enter" rounded color="green" label="Publicar" @click="publicar"/>
+          <q-btn
+            class="glossy enter"
+            rounded
+            color="green"
+            label="Publicar"
+            @click="uploadPost"
+          />
         </div>
       </div>
     </q-card>
 
     <q-card v-for="(p, id) in publicacoes" :key="id" class="my-card q-mb-lg">
       <q-card-section>
-          <q-item>
-            <q-item-section avatar>
-              <q-avatar>
-                <img :src="p.foto">
-              </q-avatar>
-            </q-item-section>
-            <q-item-section>
-              <q-item-label><strong>{{p.nome}}</strong></q-item-label>
-              <q-item-label caption>
-                {{p.tempo}}
-              </q-item-label>
-            </q-item-section>
-          </q-item>
-
-          <q-separator />
-
-          <q-card-section class="col-4">
-            <div class="q-pa-sm">
-              {{p.publicacao}}
-            </div>
-            <div v-if="p.imagem" class="col-4">
-              <q-img
-                :src="p.imagem"
-                :ratio="16/9"
+        <q-item>
+          <q-item-section avatar>
+            <q-avatar>
+              <img
+                :src="'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kristian_Nairn_%28cropped%29.jpg/140px-Kristian_Nairn_%28cropped%29.jpg'"
               />
-              <q-card-actions>
-                <q-btn flat round color="red" icon="favorite" />
-                <q-btn flat round color="primary" icon="share" />
-                <q-btn flat round color="green-5" icon="bookmark" />
-              </q-card-actions>
-            </div>
-          </q-card-section>
+            </q-avatar>
+          </q-item-section>
+          <q-item-section>
+            <q-item-label
+              ><strong>{{ p.userId.nickname }}</strong></q-item-label
+            >
+            <q-item-label caption>
+              {{ p.created_at }}
+            </q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-separator />
+
+        <q-card-section class="col-4">
+          <div class="q-pa-sm">
+            {{ p.text }}
+          </div>
+          <div v-if="p.image" class="col-4">
+            <q-img :placeholder-src="p.image" :ratio="16 / 9" />
+            <q-card-actions>
+              <q-btn
+                flat
+                round
+                color="red"
+                icon="favorite"
+                @click="likePost(p._id)"
+              />
+              {{ p.likes }}
+              <q-btn flat round color="primary" icon="share" />
+              <q-btn flat round color="green-5" icon="bookmark" />
+            </q-card-actions>
+          </div>
+        </q-card-section>
       </q-card-section>
     </q-card>
   </div>
 </template>
 
 <script>
+import { Http } from "../http/http";
+
 export default {
-  name: 'Home',
-  data () {
+  name: "Home",
+  data() {
     return {
       form: {
-        nome: 'Holdor Maneiro',
-        publicacao: '',
-        tempo: '1 s',
-        foto: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kristian_Nairn_%28cropped%29.jpg/140px-Kristian_Nairn_%28cropped%29.jpg',
-        imagem: 'https://coralplaza.com.br/wp-content/uploads/2018/10/208179-arte-potiguar-conheca-o-artesanato-do-rio-grande-do-norte-1.jpg'
+        nome: "Holdor Maneiro",
+        publicacao: "",
+        tempo: "1 s",
+        foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kristian_Nairn_%28cropped%29.jpg/140px-Kristian_Nairn_%28cropped%29.jpg",
+        imagem:
+          "https://coralplaza.com.br/wp-content/uploads/2018/10/208179-arte-potiguar-conheca-o-artesanato-do-rio-grande-do-norte-1.jpg",
       },
-      publicacoes: [
-        {
-          nome: 'João das Neves',
-          foto: 'https://cdn.quasar.dev/img/boy-avatar.png',
-          publicacao: 'Texto muito bonito aqui.',
-          tempo: '2 h',
-          imagem: 'https://imagens-revista.vivadecora.com.br/uploads/2018/09/Artesanatos-em-geral-garrafas-com-barbante.jpg'
-        }
-      ]
-    }
+      coverPictureFile: null,
+      publicacoes: [],
+    };
+  },
+  mounted() {
+    this.loadData();
   },
   methods: {
-    publicar () {
-      this.publicacoes.unshift({
-        nome: this.form.nome,
-        publicacao: this.form.publicacao,
-        foto: this.form.foto,
-        tempo: this.form.tempo,
-        imagem: this.form.imagem
-      })
-      this.form.publicacao = ''
-    }
-  }
-}
+    likePost(id) {
+      Http.post(`postslike/${id}`).then(() => {
+        this.loadData();
+      });
+    },
+    uploadPost() {
+      let data = new FormData();
+      data.append("image", this.coverPictureFile);
+      data.append("text", this.form.publicacao);
+      Http.post(`posts`, data).then(() => {
+        this.loadData();
+      });
+    },
+    loadData() {
+      Http.get("posts").then((response) => {
+        this.publicacoes = response.data;
+      });
+    },
+
+    previewFiles({ target: { files } }) {
+      if (files.length) {
+        if (files[0].size > 8644444) {
+          this.$q.notify({
+            type: "info",
+            color: "positive",
+            textColor: "white",
+            position: "center",
+            message: `${this.$t("users.webPage.lengthImg")}`,
+            timeout: 2000,
+          });
+        } else {
+          const file = files[0];
+          this.coverPictureFile = file;
+          let url = URL.createObjectURL(file);
+          this.webPagePicture = url;
+        }
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>

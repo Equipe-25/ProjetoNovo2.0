@@ -7,8 +7,8 @@
                       :ratio="1"/>
               <h3 class="title">SustentApp</h3>
               <q-input v-model="email" dense outlined color="green-5" label="Login"/>
-              <q-input v-model="senha" dense outlined color="green-5" type="password" label="Senha" />
-              <q-btn class="glossy enter" rounded color="green" label="Logar" @click="$router.push('home')"/>
+              <q-input v-model="passwordUser" dense outlined color="green-5" type="password" label="Senha" />
+              <q-btn class="glossy enter" rounded color="green" label="Logar" @click="ActionLoginUser($data)"/>
               <div class="row justify-between">
                 <div class="q-ma-xs">
                   <a class="mouse" style="color: green" @click="$router.push('cadastro')">Cadastre-se</a>
@@ -24,14 +24,16 @@
 
 </template>
 <script>
+import { mapActions } from 'vuex'
 export default {
   data () {
     return {
       email: '',
-      senha: ''
+      passwordUser: ''
     }
   },
   methods: {
+    ...mapActions("auth", ['ActionLoginUser']),
     cadastro () {
       // console.log('teste')
       this.$router.push({
