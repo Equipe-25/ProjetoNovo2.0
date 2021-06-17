@@ -14,87 +14,24 @@
           </p>
         </q-card-section>
         <q-card-section class="row flex-center">
-          <div class="q-mr-md q-mb-lg" style="width: 43%">
+          <div v-for="(card, index) in cards" :key="index" class="q-mr-md q-mb-lg" style="width: 43%">
             <q-card>
               <q-card-section>
-                <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
-                <div class="text-subtitle2 text-center" style="color: gray">@diogoladorucki</div>
+                <div class="text-h5 text-center" style="color: green">{{card.nome}}</div>
+                <div class="text-subtitle2 text-center" style="color: gray">{{card.arroba}}</div>
               </q-card-section>
-              <q-img src="../assets/diogo.jpg" :ratio="1" />
+              <!-- fotos online por 30 dia / permanentes em assets -->
+              <q-img :src="card.foto" :ratio="1" />
               <q-card-section>
                 <p class="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                {{card.frase}}
                 </p>
               </q-card-section>
               <hr>
               <q-card-actions align="center">
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/diogofelipeladorucki')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/diogo-felipe/')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/diogoladorucki/')" />
-              </q-card-actions>
-            </q-card>
-          </div>
-          <div class="q-ml-md q-mb-lg" style="width: 43%">
-            <q-card>
-              <q-card-section>
-                <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
-                <div class="text-subtitle2 text-center" style="color: gray">@diogoladorucki</div>
-              </q-card-section>
-              <q-img src="../assets/diogo.jpg" :ratio="1" />
-              <q-card-section>
-                <p class="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </q-card-section>
-              <hr>
-              <q-card-actions align="center">
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/diogofelipeladorucki')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/diogo-felipe/')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/diogoladorucki/')" />
-              </q-card-actions>
-            </q-card>
-          </div>
-          <div class="q-mr-md q-mb-lg" style="width: 43%">
-            <q-card>
-              <q-card-section>
-                <div class="text-h5 text-center" style="color: green">Edson Santana</div>
-                <div class="text-subtitle2 text-center" style="color: gray">@edsonju99</div>
-              </q-card-section>
-              <q-img src="../assets/ed.jpeg" :ratio="1" />
-              <q-card-section>
-                <p class="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </q-card-section>
-              <hr>
-              <q-card-actions align="center">
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/Edson-jr')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/edson-junior-2937b5144/')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/edsonju99/')" />
-              </q-card-actions>
-            </q-card>
-          </div>
-          <div class="q-ml-md q-mb-lg" style="width: 43%">
-            <q-card>
-              <q-card-section>
-                <div class="text-h5 text-center" style="color: green">Diogo Felipe Silva</div>
-                <div class="text-subtitle2 text-center" style="color: gray">@diogoladorucki</div>
-              </q-card-section>
-              <q-img src="../assets/diogo.jpg" :ratio="1" />
-              <q-card-section>
-                <p class="text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </q-card-section>
-              <hr>
-              <q-card-actions align="center">
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link('https://github.com/diogofelipeladorucki')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link('https://www.linkedin.com/in/diogo-felipe/')" />
-                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link('https://www.instagram.com/diogoladorucki/')" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/git.png" :ratio="1" @click="link(card.linkGitHub)" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/linkedin.png" :ratio="1" @click="link(card.linkLinkedIn)" />
+                <q-img style="width: 15%" class="q-ml-lg q-mb-sm pointer" src="../assets/insta.png" :ratio="1" @click="link(card.linkInsta)" />
               </q-card-actions>
             </q-card>
           </div>
@@ -109,7 +46,45 @@ export default {
   data () {
     return {
       texto: 'O termo sustentabilidade vem sendo utilizado com mais frequência em empresas e organizações desde a primeira década do século XXI. Medidas sustentáveis visam permitir as atividades humanas e a renovação dos recursos naturais.',
-      texto2: 'A SustentApp é uma empresa emergente no estado, fornecendo condições aos seus colaboradores. Seus produtos correspondem às necessidades dos clientes de forma sustentável, poupando tempo, dinheiro e esforço com materiais de qualidade. Desta forma, a SustentApp atua com responsabilidade, assumindo um compromisso real com seus clientes. Esta união fornece produtos biodegradáveis com tecnologia de ponta. Pensamos na sustentabilidade desde a produção, incluindo a relação custo/benefício, redução de desperdícios e menor produção de lixo.'
+      texto2: 'A SustentApp é uma empresa emergente no estado, fornecendo condições aos seus colaboradores. Seus produtos correspondem às necessidades dos clientes de forma sustentável, poupando tempo, dinheiro e esforço com materiais de qualidade. Desta forma, a SustentApp atua com responsabilidade, assumindo um compromisso real com seus clientes. Esta união fornece produtos biodegradáveis com tecnologia de ponta. Pensamos na sustentabilidade desde a produção, incluindo a relação custo/benefício, redução de desperdícios e menor produção de lixo.',
+      cards: [
+        {
+          nome: 'Diogo Felipe Silva',
+          arroba: '@diogoladorucki',
+          foto: 'https://i.ibb.co/prmjr26/108926286-2954814104622865-4347383683472703677-n.jpg',
+          frase: 'Sem sacrifícios, não há vitória.',
+          linkInsta: 'https://www.instagram.com/diogoladorucki/',
+          linkGitHub: 'https://github.com/diogofelipeladorucki',
+          linkLinkedIn: 'https://www.linkedin.com/in/diogo-felipe/'
+        },
+        {
+          nome: 'Sabrina Holanda',
+          arroba: '@adnaloh_',
+          foto: 'https://i.ibb.co/x37HwG8/sabrina.jpg',
+          frase: 'Foco, força e fé.',
+          linkInsta: 'https://www.instagram.com/adnaloh_/',
+          linkGitHub: 'https://github.com/SabrinaHolanda',
+          linkLinkedIn: 'https://www.linkedin.com/in/maria-sabrina/'
+        },
+        {
+          nome: 'Edson Santana',
+          arroba: '@edsonju99',
+          foto: 'https://i.ibb.co/RPpzLz9/1245e577-45bb-4f9c-bda3-126dbc246785.jpg',
+          frase: 'Aquele que não vive para servir, não serve para viver.',
+          linkInsta: 'https://www.instagram.com/diogoladorucki/',
+          linkGitHub: 'https://github.com/Edson-jr',
+          linkLinkedIn: 'https://www.linkedin.com/in/edson-junior-2937b5144/'
+        },
+        {
+          nome: 'Audrey Alison Pinheiro',
+          arroba: '@audrey_pinheiro019',
+          foto: 'https://i.ibb.co/89vMbww/audrey.jpg',
+          frase: 'Você não vai vencer todos os dias, mas poderá lutar sempre e um dia vencerá.',
+          linkInsta: 'https://www.instagram.com/audrey_pinheiro019/',
+          linkGitHub: 'https://github.com/AUDREY-DEV-PROG',
+          linkLinkedIn: 'https://www.linkedin.com/in/audrey-alison-6394451b5'
+        }
+      ]
     }
   },
   methods: {
