@@ -45,8 +45,8 @@
 export default {
   data () {
     return {
-      texto: 'O termo sustentabilidade vem sendo utilizado com mais frequência em empresas e organizações desde a primeira década do século XXI. Medidas sustentáveis visam permitir as atividades humanas e a renovação dos recursos naturais.',
-      texto2: 'A SustentApp é uma empresa emergente no estado, fornecendo condições aos seus colaboradores. Seus produtos correspondem às necessidades dos clientes de forma sustentável, poupando tempo, dinheiro e esforço com materiais de qualidade. Desta forma, a SustentApp atua com responsabilidade, assumindo um compromisso real com seus clientes. Esta união fornece produtos biodegradáveis com tecnologia de ponta. Pensamos na sustentabilidade desde a produção, incluindo a relação custo/benefício, redução de desperdícios e menor produção de lixo.',
+      texto: 'Visamos auxiliar o trabalho artesão, com intuito de oferecer maior acessibilidade para divulgação de duas obras.',
+      texto2: 'A Sustentapp tem como objetivo contribuir com ações que sejam benéficas para o meio ambiente. Acreditamos que com a criatividade, pessoas podem transformar algo que não seja mais utilizado em um produto de uso.',
       cards: [
         {
           nome: 'Diogo Felipe Silva',
