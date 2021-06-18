@@ -129,7 +129,7 @@ export default {
     },
     loadData() {
       Http.get("posts").then((response) => {
-        this.publicacoes = response.data;
+        this.publicacoes = response.data.reverse();
       });
     },
 

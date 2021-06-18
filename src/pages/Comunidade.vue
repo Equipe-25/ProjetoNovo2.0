@@ -116,7 +116,7 @@ export default {
     },
     loadData() {
       Http.get("sales").then((response) => {
-        this.publicacoes = response.data;
+        this.publicacoes = response.data.reverse();
       });
     },
     uploadPost() {

@@ -4,7 +4,6 @@
     <q-layout view="lHh lpr lFf"  class="shadow-2 bg-cor-fundo">
       <q-header elevated class="bg-cor">
         <q-toolbar>
-          <!-- <q-btn flat round dense icon="menu" class="q-mr-sm" /> -->
           <q-avatar>
               <q-img
                 src="icons/rrr.png"
@@ -39,9 +38,9 @@ export default {
   data () {
     return {
       tab: 'images',
-      leftDrawerOpen: false
+      leftDrawerOpen: false,
     }
-  }
+  },
 }
 </script>
 

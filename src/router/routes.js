@@ -12,11 +12,6 @@ const routes = [
     children: [
       ...pages
     ],
-    path: "/",
-    component: () => import("layouts/SecondLayout.vue"),
-    children: [
-      ...auxiliares
-    ],
     beforeEnter: async (to, from, next) => {
       if (Storage.getLocalToken()) {
         await store.dispatch("auth/ActionVerifyToken", next);
@@ -29,6 +24,13 @@ const routes = [
   {
     path: "*",
     component: () => import("../pages/Error404.vue")
+  },
+  {
+    path: "/",
+    component: () => import("layouts/SecondLayout.vue"),
+    children: [
+      ...auxiliares
+    ],
   }
 ];
 

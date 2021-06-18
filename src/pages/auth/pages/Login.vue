@@ -35,7 +35,6 @@ export default {
   methods: {
     ...mapActions("auth", ['ActionLoginUser']),
     cadastro () {
-      // console.log('teste')
       this.$router.push({
         name: 'cadastro'
       })

@@ -13,7 +13,7 @@
               <q-item-label><h4 class="q-ma-xs">{{user.nickname}}</h4></q-item-label>
               <div class="col-auto text-grey text-caption q-pt-md row no-wrap items-center" style="padding-top: 0; font-size: 20px">
                 <q-icon name="place" />
-                Recife
+                {{user.city}}
               </div>
             </q-item-section>
         </q-item>

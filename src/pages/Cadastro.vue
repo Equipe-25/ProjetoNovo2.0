@@ -110,7 +110,7 @@ export default {
           email: this.email,
           password: this.password,
         }).then((response) => {
-          console.log(response)
+          this.$router.push('login')
           this.publicacoes = response.data;
         }).catch((error)=>{
           console.log(error);
