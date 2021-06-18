@@ -2,6 +2,7 @@ import store from "../store/index";
 import * as Storage from "../pages/auth/storage/storage";
 import { routes as auth } from "../pages/auth/index";
 import { routes as pages } from "../pages/index";
+import { routes as auxiliares } from "../pages/index2";
 
 
 const routes = [
@@ -10,6 +11,11 @@ const routes = [
     component: () => import("layouts/MainLayout.vue"),
     children: [
       ...pages
+    ],
+    path: "/",
+    component: () => import("layouts/SecondLayout.vue"),
+    children: [
+      ...auxiliares
     ],
     beforeEnter: async (to, from, next) => {
       if (Storage.getLocalToken()) {

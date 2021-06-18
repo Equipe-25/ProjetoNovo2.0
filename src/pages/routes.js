@@ -6,6 +6,6 @@ export default [
     { path: 'comunidade', name: 'comunidade', component: () => import('./Comunidade.vue') },
     { path: 'configuracoes', name: 'configuracoes', component: () => import('./Configuracoes.vue') },
     { path: 'redefinir-senha', name: 'redefinir-senha', component: () => import('./RedefinirSenha.vue') },
-    { path: 'dicas', name: 'dicas', component: () => import('./Dicas.vue') }
+    { path: 'dicas', name: 'dicas', component: () => import('./Dicas.vue') },
 ];
     

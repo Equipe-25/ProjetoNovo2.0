@@ -31,18 +31,7 @@ export default {
   },
   methods: {
     enviar () {
-      console.log('NOTIFY AQUI')
-      this.nome = ''
-      this.email = ''
-      this.telefone = ''
-      this.mensagem = ''
-      // Notify({
-      //   color: 'green ',
-      // textColor: 'white',
-      //   message: 'Contato enviado com sucesso!',
-      //   position: 'top',
-      //   timeout: 3000
-      // })
+     console.log('Vige que já enviou');
     }
   }
 }

@@ -17,21 +17,27 @@
           style="display: none"
           @change="previewFiles"
         />
-        <q-btn
-          class="glossy enter"
-          rounded
-          color="green"
-          label="Escolher arquivo"
-          @click="$refs.file.click()"
-        />
-        <div class="row justify-end">
-          <q-btn
-            class="glossy enter"
-            rounded
-            color="green"
-            label="Publicar"
-            @click="uploadPost"
-          />
+        <div class="row">
+          <div class="col">
+            <q-btn
+              class="glossy enter"
+              rounded
+              color="green"
+              label="Escolher arquivo"
+              @click="$refs.file.click()"
+            />
+          </div>
+          <div class="col">
+            <div class="row justify-end">
+              <q-btn
+                class="glossy enter"
+                rounded
+                color="green"
+                label="Publicar"
+                @click="uploadPost"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </q-card>
@@ -117,6 +123,8 @@ export default {
       data.append("text", this.form.publicacao);
       Http.post(`posts`, data).then(() => {
         this.loadData();
+        this.form.publicacao = "";
+        this.coverPictureFile = null;
       });
     },
     loadData() {

@@ -1,7 +1,6 @@
 <template>
   <div class="q-pa-lg container">
     <q-card class="my-card q-mb-lg">
-      {{ form }}{{ coverPictureFile }}
       <div class="q-pa-md">
         <q-input
           v-model="form.titulo"
@@ -57,8 +56,7 @@
       </div>
     </q-card>
 
-    <q-card v-for="(p, id) in publicacoes" :key="id">
-      {{ p }}
+    <q-card v-for="(p, id) in publicacoes" :key="id" class="q-mb-lg">
       <q-card-section class="row flex-center" style="padding-top: 50px">
         <div class="q-mr-md q-mb-lg" style="width: 90%">
           <q-card>
@@ -131,7 +129,6 @@ export default {
         this.loadData();
       });
     },
-
     previewFiles({ target: { files } }) {
       if (files.length) {
         if (files[0].size > 8644444) {
