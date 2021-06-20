@@ -1,8 +1,8 @@
 export default [
   {
-    path: "",
+    path: "/",
     name: "login",
-    component: () => import("../pages/Login")
+    component: () => import("../pages/Login.vue")
   }
   ];
   
